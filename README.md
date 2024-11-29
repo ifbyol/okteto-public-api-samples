@@ -2,8 +2,8 @@
 This repository show some samples on how to use the Okteto's public API in combination with other tools to automate operations
 
 All the samples expect you have a couple of environment variables set:
-* OKTETO_URL: It is the URL of your Okteto instance. For example: https://test.okteto.com/
-* OKTETO_TOKEN: It is the token to authenticate against the Okteto API, and it will be also used by the CLI in those scripts that use it. You can create an Admin Access Token from the Okteto UI.
+* `OKTETO_URL`: It is the URL of your Okteto instance. For example: https://test.okteto.com/
+* `OKTETO_TOKEN`: It is the token to authenticate against the Okteto API, and it will be also used by the CLI in those scripts that use it. You can create an Admin Access Token from the Okteto UI.
 
 Those environment variables are used to contact to the public API, but also by the Okteto CLI, so it is not needed to execute `okteto context use` before running the scripts.
 
