@@ -9,9 +9,11 @@ import (
 )
 
 func main() {
+	token := os.Getenv("OKTETO_TOKEN")
+	host := os.Getenv("OKTETO_HOST")
 	config := okteto.NewConfiguration()
-	config.Host = "okteto.ifbyol.dev.okteto.net"
-	config.DefaultHeader["Authorization"] = "Bearer 4iwgTsswjktYJKcSAT2D3Os7LnQiLK9DQentWOrLHoqMpG9j"
+	config.Host = host
+	config.DefaultHeader["Authorization"] = fmt.Sprintf("Bearer %s", token)
 	client := okteto.NewAPIClient(config)
 
 	ctx := context.Background()
