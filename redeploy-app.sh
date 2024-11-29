@@ -81,7 +81,7 @@ handle_applications() {
     fi
 
     last_update_epoch=$(gdate -d "$updated_time" +%s)
-    threshold_epoch=$(gdate -d "1 minutes ago" +%s)
+    threshold_epoch=$(gdate -d "24 hours ago" +%s)
 
     if [ "$last_update_epoch" -ge "$threshold_epoch" ]; then
       echo "Application '$name' was updated recently. Skipping it"

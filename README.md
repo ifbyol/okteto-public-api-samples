@@ -52,7 +52,7 @@ $ OKTETO_URL=https://test.okteto.com/ OKTETO_TOKEN=your-token ./delete-dev-volum
 ### Redeploy an application within any development namespace
 
 `redeploy-app.sh` allows to redeploy a specific application on any development namespace to keep it up to date. This script expects a repository in the form of <owner>/repo (e.g. `okteto/movies`), and it might also accept a branch. 
-It will check all applications deployed within all the development namespaces, and it will redeploy all the ones that match the repository and branch provided. If branch is not provided, it will only match the repository.
+It will check all applications deployed within all the development namespaces, and it will redeploy all the ones that match the repository and branch provided **if they were not updated in the last 24 hours**. If branch is not provided, it will only match the repository.
 
 > **Note**: This scripts uses gdate to calculate the time, so you might need to install it if you are using MacOS. You can install it with `brew install coreutils`.
 
